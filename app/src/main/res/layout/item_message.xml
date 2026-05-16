@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="4dp">
+
+    <!-- Received message -->
+    <!-- Use a guideline to limit width to 75% without clipping -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <LinearLayout
+        android:id="@+id/layoutReceived"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical75"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/messageReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_received"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="Hello, how are you?"/>
+
+        <TextView
+            android:id="@+id/timeReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10:30 AM"
+            android:textSize="10sp"
+            android:textColor="#757575"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Sent message -->
+    <!-- Inverse guideline for sent message (starts at 25%) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <LinearLayout
+        android:id="@+id/layoutSent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/messageSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_sent"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="I'm good, thanks!"/>
+
+        <TextView
+            android:id="@+id/timeSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10:32 AM"
+            android:textSize="10sp"
+            android:textColor="#757575"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

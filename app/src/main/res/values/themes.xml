@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Ft_hangouts" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorSecondary">@color/lavander</item>
+        <item name="colorAccent">@color/sand</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="Theme.Hangouts.Blue" parent="Theme.Ft_hangouts">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blueDark</item>
+    </style>
+
+    <style name="Theme.Hangouts.Green" parent="Theme.Ft_hangouts">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/greenDark</item>
+    </style>
+
+</resources>
